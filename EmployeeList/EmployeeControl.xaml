@@ -7,15 +7,13 @@
              mc:Ignorable="d" Width="303.273" Height="213.486">
     <Grid HorizontalAlignment="Left" Width="303" Height="173" VerticalAlignment="Top" Margin="0,0,0,-0.2" >
         <Label Content="Телефон" HorizontalAlignment="Left" Margin="24,27,0,0" VerticalAlignment="Top" RenderTransformOrigin="-4.638,-2.424"/>
-        <TextBox  x:Name="TbPhone" Text="{Binding Phone}" HorizontalAlignment="Left" Height="23" Margin="83,29,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154"/>
+        <TextBox  x:Name="TbPhone" Text="{Binding Employee.Phone}" HorizontalAlignment="Left" Height="23" Margin="83,29,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154"/>
         <Label  Content="Имя" HorizontalAlignment="Left" Margin="24,53,0,0" VerticalAlignment="Top" RenderTransformOrigin="-4.638,-2.424"/>
-        <TextBox  x:Name="TbFirstName"  Text="{Binding FirstName}" HorizontalAlignment="Left" Height="23" Margin="83,57,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="154" RenderTransformOrigin="0.459,1.608"/>
+        <TextBox  x:Name="TbFirstName"  Text="{Binding Employee.FirstName}" HorizontalAlignment="Left" Height="23" Margin="83,57,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="154" RenderTransformOrigin="0.459,1.608"/>
         <Label  Content="Фамилия" HorizontalAlignment="Left" Margin="24,84,0,0" VerticalAlignment="Top" RenderTransformOrigin="-4.638,-2.424"/>
-        <TextBox x:Name="TbSurName"  Text="{Binding SecondName}" HorizontalAlignment="Left" Height="23" Margin="83,87,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="154" RenderTransformOrigin="0.459,1.608"/>
+        <TextBox x:Name="TbSurName"  Text="{Binding Employee.SecondName}" HorizontalAlignment="Left" Height="23" Margin="83,87,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="154" RenderTransformOrigin="0.459,1.608"/>
         <Label Content="Отчество" HorizontalAlignment="Left" Margin="24,115,0,0" VerticalAlignment="Top" RenderTransformOrigin="-4.638,-2.424"/>
-        <TextBox   x:Name="TbSecondName"   Text="{Binding SurName}" HorizontalAlignment="Left" Height="23" Margin="83,119,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="154" RenderTransformOrigin="0.459,1.608"/>
-        <ComboBox x:Name="CbDepartament" ItemsSource="{Binding Departament}" Text= "{Binding Departament}" HorizontalAlignment="Left" Height="26" Margin="83,157,0,-10" VerticalAlignment="Top" Width="120"/>
-
-
+        <TextBox   x:Name="TbSecondName"   Text="{Binding Employee.SurName}" HorizontalAlignment="Left" Height="23" Margin="83,119,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="154" RenderTransformOrigin="0.459,1.608"/>
+        <ComboBox x:Name="CbDepartament" ItemsSource="{Binding Departments}" Text="{Binding Employee.Department}" HorizontalAlignment="Left" Height="26" Margin="83,157,0,-10" VerticalAlignment="Top" Width="120"/>
     </Grid>
 </UserControl>

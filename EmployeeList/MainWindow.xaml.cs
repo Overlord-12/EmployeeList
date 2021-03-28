@@ -39,6 +39,10 @@ namespace EmployeeList
         private void BtSave_Click(object sender, RoutedEventArgs e)
         {
             if (ListEmployee.SelectedItems.Count < 1) return;
+            if (generate.Udate(EmployeeControl.Employee) > 0)
+            {
+
+            }
             //ListEmployee(ListEmployee.IndexOf(SelectedContact));
 
 
@@ -50,9 +54,9 @@ namespace EmployeeList
 
 
             if (MessageBox.Show("Удалить контакт?","Удаление контакта", MessageBoxButton.YesNo,
-                MessageBoxImage.Question)== MessageBoxResult.Yes)
+                     MessageBoxImage.Question)== MessageBoxResult.Yes)
             {
-                generate.Employee.Remove((Employee)ListEmployee.SelectedItems[0]);
+                generate.Remove((Employee)ListEmployee.SelectedItems[0]);
         
             }
 
@@ -60,6 +64,18 @@ namespace EmployeeList
 
         private void BtAdd_Click(object sender, RoutedEventArgs e)
         {
+            EditEmployee editor = new EditEmployee();
+            if (editor.ShowDialog() == true)
+            {
+                if (generate.Add(editor.Contact) > 0)
+                {
+                 
+                    employees[employees.IndexOf(SelectedContact)] = EmployeeControl.Employee;
+                    MessageBox.Show("Запись успешно добавлена", "Добавление записи",
+                     MessageBoxButton.OK, MessageBoxImage.Information);
+                } 
+                
+            }
 
         }
 

@@ -23,7 +23,7 @@ namespace EmployeeList
     /// </summary>
     public partial class EmployeeControl : UserControl, INotifyPropertyChanged
     {
-        ObservableCollection<Department> Departments = new ObservableCollection<Department>();
+       public ObservableCollection<Department> Departments = new ObservableCollection<Department>();
 
         private Employee _employee;
 
@@ -54,8 +54,21 @@ namespace EmployeeList
           
         }
 
+        public void PrepareUI(EditorType editorType)
+        {
+            switch (editorType)
+            {
+                case EditorType.Add:
+                    this.TbPhone.IsReadOnly = false;
+                    this.TbPhone.Background = (SolidColorBrush)(new BrushConverter().ConvertFrom("#FFFFFFFF")); /*#FFF1EFEF*/
+                    break;
+                case EditorType.Edit:
+                    break;
+            }
+        }
 
-       
+
+
 
         //public void Get(Employee employee)
         //{

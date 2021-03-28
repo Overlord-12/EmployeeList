@@ -10,15 +10,15 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <ListView SelectedItem="{Binding EmployeeControl}" ItemsSource="{Binding employees}" x:Name="ListEmployee" Margin="10,10,355.6,10" SelectionChanged="ListEmployee_SelectionChanged">
+        <ListView SelectedItem="{Binding SelectedContact}" ItemsSource="{Binding employees}" x:Name="ListEmployee" Margin="10,10,355.6,10" SelectionChanged="ListEmployee_SelectionChanged">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Width="100px" DisplayMemberBinding="{Binding Phone}">Телефон</GridViewColumn>
                     <GridViewColumn Width="auto" DisplayMemberBinding="{Binding FIO}">ФИО</GridViewColumn>
                 </GridView>
             </ListView.View>
-        </ListView>
-        <local:EmployeeControl  x:Name="EmployeeControl" Height="Auto" Margin="452,10,53.6,207" Width="244"/>
+            </ListView>
+            <local:EmployeeControl  x:Name="EmployeeControl" Height="Auto" Margin="452,10,53.6,207" Width="244"/>
         <Button x:Name="BtSave" Content="Сохранить" Margin="417,218,257.6,0" Click="BtSave_Click" Height="19" VerticalAlignment="Top"/>
         <Button x:Name="BtDelete"  Content="Удалить" Margin="535,218,139.6,0" Click="BtDelete_Click" Height="19" VerticalAlignment="Top"/>
         <Button x:Name="BtAdd" Content="Добавить" Margin="664,218,10.6,0" Click="BtAdd_Click" Height="19" VerticalAlignment="Top"/>

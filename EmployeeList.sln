@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.31112.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeList", "EmployeeList\EmployeeList.csproj", "{A3599A50-BE72-44E2-AD39-EAFD687881F8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Base", "Base\Base.csproj", "{9BA14B20-E693-4F74-A882-53E610231448}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Base", "Base\Base.csproj", "{9BA14B20-E693-4F74-A882-53E610231448}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
