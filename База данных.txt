@@ -1,0 +1,47 @@
+USE [EmployeeBase]
+GO
+
+/****** Object:  Table [dbo].[DepartamentCategory]    Script Date: 27.03.2021 19:58:26 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[DepartamentCategory](
+	[Departament] [int] NOT NULL,
+	[Desription] [nvarchar](50) NULL,
+ CONSTRAINT [PK_DepartamentCategory] PRIMARY KEY CLUSTERED 
+(
+	[Departament] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+USE [EmployeeBase]
+GO
+
+/****** Object:  Table [dbo].[EmployeeList]    Script Date: 27.03.2021 19:59:11 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[EmployeeList](
+	[FirstName] [nvarchar](50) NULL,
+	[SecondName] [nvarchar](30) NULL,
+	[LastName] [nvarchar](50) NULL,
+	[Departament] [int] NOT NULL,
+	[Phone] [nvarchar](20) NOT NULL,
+ CONSTRAINT [PK_EmployeeList] PRIMARY KEY CLUSTERED 
+(
+	[Phone] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[EmployeeList] ADD  CONSTRAINT [DF_EmployeeList_Departament]  DEFAULT ((1)) FOR [Departament]
+GO
+
+

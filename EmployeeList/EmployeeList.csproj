@@ -37,6 +37,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -71,12 +73,10 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Departament.cs" />
     <Compile Include="EditEmployee.xaml.cs">
       <DependentUpon>EditEmployee.xaml</DependentUpon>
     </Compile>
     <Compile Include="EditorType.cs" />
-    <Compile Include="Employee.cs" />
     <Compile Include="EmployeeControl.xaml.cs">
       <DependentUpon>EmployeeControl.xaml</DependentUpon>
     </Compile>
@@ -111,6 +111,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Configuration\Configuration.csproj">
+      <Project>{0b42e95a-c1a2-45a2-9d65-fb32a5c7446d}</Project>
+      <Name>Configuration</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
